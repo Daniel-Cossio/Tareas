@@ -21,6 +21,14 @@ export class TareasComponent implements OnInit {
 
   }
 
+  eliminarTarea(index:number):void{
+    this.listaDeTareas.splice(index, 1)
+  }
+
+  actualizarTarea(tarea:Tarea, index:number){
+    this.listaDeTareas[index].estado=!tarea.estado
+  }
+
   constructor() { }
 
   ngOnInit(): void {
